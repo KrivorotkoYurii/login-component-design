@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/login-component-design/static/css/main.b3d9d401.css",
+    "main.js": "/login-component-design/static/js/main.618ecb25.js",
+    "static/media/page-not-found.png": "/login-component-design/static/media/page-not-found.6f5b123471bc09721371.png",
+    "index.html": "/login-component-design/index.html",
+    "main.b3d9d401.css.map": "/login-component-design/static/css/main.b3d9d401.css.map",
+    "main.618ecb25.js.map": "/login-component-design/static/js/main.618ecb25.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3d9d401.css",
+    "static/js/main.618ecb25.js"
+  ]
+}

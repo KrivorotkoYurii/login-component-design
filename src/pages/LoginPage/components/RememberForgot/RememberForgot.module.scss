@@ -1,0 +1,29 @@
+.remember {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+
+  &__checkbox {
+    accent-color: #fff;
+    margin-right: 3px;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__forgot {
+    color: #fff;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+

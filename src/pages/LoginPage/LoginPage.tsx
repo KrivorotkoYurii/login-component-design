@@ -4,6 +4,9 @@ import styles from './LoginPage.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { RememberForgot } from './components/RememberForgot';
+import { LoginButton } from './components/LoginButton';
+import { Register } from './components/Register';
 
 export const LoginPage: React.FC = () => {
   return (
@@ -32,29 +35,11 @@ export const LoginPage: React.FC = () => {
             <FontAwesomeIcon icon={faLock} className={styles.login__icon} />
           </div>
 
-          <div className={styles.login__rememberForgot}>
-            <label>
-              <input type="checkbox" className={styles.login__checkbox} />{' '}
-              Remember me
-            </label>{' '}
-            <a href="#" className={styles.login__forgot}>
-              Forgot password?
-            </a>
-          </div>
+          <RememberForgot />
 
-          <button type="submit" className={styles.login__button}>
-            Login
-          </button>
+          <LoginButton />
 
-          <div className={styles.login__register}>
-            <p>
-              Don&apos;t have an account?
-              <a href="#" className={styles.login__registerLink}>
-                {' '}
-                Register
-              </a>
-            </p>
-          </div>
+          <Register />
         </form>
       </div>
     </div>

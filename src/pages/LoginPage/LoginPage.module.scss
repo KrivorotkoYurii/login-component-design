@@ -59,4 +59,11 @@
     transform: translateY(-50%);
     font-size: 18px;
   }
+
+  &__error {
+    color: #e57373;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 15px;
+  }
 }

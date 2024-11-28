@@ -16,6 +16,16 @@ export const LoginPage: React.FC = () => {
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
 
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+    setEmailError('');
+  };
+
+  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(event.target.value);
+    setPasswordError('');
+  };
+
   const validateForm = () => {
     let isValid = true;
 
@@ -39,10 +49,10 @@ export const LoginPage: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (validateForm()) {
-      // eslint-disable-next-line no-console
-      console.log('Form submitted successfully!'); // remove this console statement
-    }
+    validateForm();
+
+    // eslint-disable-next-line no-console
+    console.log('Form submitted successfully!'); // remove this console statement
   };
 
   return (
@@ -55,26 +65,32 @@ export const LoginPage: React.FC = () => {
             <input
               className={styles.login__input}
               value={email}
-              onChange={event => setEmail(event.target.value)}
+              onChange={handleEmailChange}
               type="text"
               placeholder="Email"
               required
             />
             <FontAwesomeIcon icon={faUser} className={styles.login__icon} />
-            {emailError && <span>{emailError}</span>}
+            {emailError && (
+              <span className={styles.login__error}>{`${emailError} *`}</span>
+            )}
           </div>
 
           <div className={styles.login__inputBox}>
             <input
               className={styles.login__input}
               value={password}
-              onChange={event => setPassword(event.target.value)}
+              onChange={handlePasswordChange}
               type="password"
               placeholder="Password"
               required
             />
             <FontAwesomeIcon icon={faLock} className={styles.login__icon} />
-            {passwordError && <span>{passwordError}</span>}
+            {passwordError && (
+              <span
+                className={styles.login__error}
+              >{`${passwordError} *`}</span>
+            )}
           </div>
 
           <RememberForgot />
